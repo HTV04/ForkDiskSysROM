@@ -6,7 +6,7 @@ ForkDiskSysROM does not currently have the same goal as FreeDiskSysROM, which is
 
 The problem that arises from a goal like this is how far "original" code can go. FDS games were made with the FDS BIOS in mind, not the other way around, so the offsets for some functions may only allow for the original FDS BIOS code. I suppose in this case, exceptions will have to be made.
 
-Also, I don't know what the hell I am supposed to do about the sound samples. ¯\_(ツ)_/¯
+Also, I don't know what the hell I am supposed to do about the sound samples. ¯\\_(ツ)_/¯
 
 I've currently semi-implemented some of the code related to files for now. I'm planning to add more later, though.
 
@@ -23,6 +23,7 @@ So this is the way I'm formatting the legend ~~totally not a traffic light~~:
 | Not implemented |
 
 | Address | Name | Implemented |
+| ------- | ---- | ----------- |
 | $e149 | Delay131 | :green_circle: |
 | $e153 | Delayms | :green_circle: |
 | $e161 | DisPFObj | :green_circle: |
