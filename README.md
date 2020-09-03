@@ -20,76 +20,76 @@ So this is the way I'm formatting the legend ~~totally not a traffic light~~:
 | :green_circle: | Fully implemented, open-source |
 | :yellow_circle: | Implemented, but still mainly uses FDS BIOS code |
 | :red_circle: | Partially implemented, may not work |
-| | Not implemented |
+| Not implemented |
 
-| Address | Name | # of Games | Implemented |
+| Address | Name | Implemented |
 | ------- | ---- | ------- | ----------- |
-| $e149 | Delay131 | | :green_circle: |
-| $e153 | Delayms | | :green_circle: |
-| $e161 | DisPFObj | | :green_circle: |
-| $e16b | EnPFObj | | :green_circle: |
-| $e171 | DisObj | | :green_circle: |
-| $e178 | EnObj | | :green_circle: |
-| $e17e | DisPF | | :green_circle: |
-| $e185 | EnPF | | :green_circle: |
-| $e18b | NMI | | :green_circle: |
-| $e1b2 | VINTWait | | :green_circle: |
-| $e1c7 | IRQ | | :green_circle: |
-| $e1f8 | LoadFiles | | :red_circle: |
-| $e237 | AppendFile | | :red_circle: |
-| $e239 | WriteFile | | :red_circle: |
-| $e2b7 | CheckFileCount | | |
-| $e2bb | AdjustFileCount | | |
-| $e301 | SetFileCount1 | | |
-| $e305 | SetFileCount | | |
-| $e32a | GetDiskInfo | | |
-| $e3da | AddYtoPtr0A | | |
-| $e3e7 | GetHardCodedPointers | | |
-| $e3ea | GetHardCodedPointersWriteProtected | | |
-| $e445 | CheckDiskHeader | | |
-| $e484 | GetNumFiles | | |
-| $e492 | SetNumFiles | | |
-| $e4a0 | FileMatchTest | 0 | |
-| $e4da | SkipFiles | 0 | |
-| $e4f9 | LoadData | | |
-| $e506 | ReadData | | |
-| $e5b5 | SaveData | | |
-| $e64d | WaitForDriveReady | | |
-| $e685 | StopMotor | | |
-| $e68f | CheckBlockType | | |
-| $e6b0 | WriteBlockType | | |
-| $e6e3 | StartXfer | | |
-| $e706 | EndOfBlockRead | | |
-| $e729 | EndOfBlkWrite | | |
-| $e778 | XferDone | | |
-| $e794 | Xfer1stByte | | |
-| $e7a3 | XferByte | | |
-| $e7bb | VRAMStructWrite | | :green_circle: |
-| $e844 | FetchDirectPtr | | :green_circle: |
-| $e86a | WriteVRAMBuffers | | :green_circle: |
-| $e8b3 | ReadIndividualVRAMBytes | | :green_circle: |
-| $e8d2 | PrepareVRAMString | | :green_circle: |
-| $e8e1 | PrepareVRAMStrings | | :green_circle: |
-| $e94f | GetVRAMBufferByte | | :green_circle: |
-| $e97d | Pixel2NamConv | | :green_circle: |
-| $e997 | Nam2PixelConv | | :green_circle: |
-| $e9b1 | Random | | :green_circle: |
-| $e9c8 | SpriteDMA | | :green_circle: |
-| $e9d3 | CounterLogic | | :green_circle: |
-| $e9eb | ReadPads | | :green_circle: |
-| $ea1a | ReadDownPads | | :green_circle: |
-| $ea1f | ReadOrDownPads | | :green_circle: |
-| $ea36 | ReadDownVerifyPads | | :green_circle: |
-| $ea4c | ReadOrDownVerifyPads | | :green_circle: |
-| $ea68 | ReadDownExpPads | | :green_circle: |
-| $ea84 | VRAMFill | | :green_circle: |
-| $ead2 | MemFill | | :green_circle: |
-| $eaea | SetScroll | | :green_circle: |
-| $eafd | JumpEngine | | :green_circle: |
-| $eb13 | ReadKeyboard | 0 | |
-| $ebaf | LoadTileset | | :green_circle: |
-| $ec22 | unk_EC22 | | |
-| $ee17 | StartMotor | | |
+| $e149 | Delay131 | :green_circle: |
+| $e153 | Delayms | :green_circle: |
+| $e161 | DisPFObj | :green_circle: |
+| $e16b | EnPFObj | :green_circle: |
+| $e171 | DisObj | :green_circle: |
+| $e178 | EnObj | :green_circle: |
+| $e17e | DisPF | :green_circle: |
+| $e185 | EnPF | :green_circle: |
+| $e18b | NMI | :green_circle: |
+| $e1b2 | VINTWait | :green_circle: |
+| $e1c7 | IRQ | :green_circle: |
+| $e1f8 | LoadFiles | :red_circle: |
+| $e237 | AppendFile | :red_circle: |
+| $e239 | WriteFile | :red_circle: |
+| $e2b7 | CheckFileCount | |
+| $e2bb | AdjustFileCount | |
+| $e301 | SetFileCount1 | |
+| $e305 | SetFileCount | |
+| $e32a | GetDiskInfo | |
+| $e3da | AddYtoPtr0A | |
+| $e3e7 | GetHardCodedPointers | |
+| $e3ea | GetHardCodedPointersWriteProtected | |
+| $e445 | CheckDiskHeader | |
+| $e484 | GetNumFiles | |
+| $e492 | SetNumFiles | |
+| $e4a0 | FileMatchTest | |
+| $e4da | SkipFiles | |
+| $e4f9 | LoadData | |
+| $e506 | ReadData | |
+| $e5b5 | SaveData | |
+| $e64d | WaitForDriveReady | |
+| $e685 | StopMotor | |
+| $e68f | CheckBlockType | |
+| $e6b0 | WriteBlockType | |
+| $e6e3 | StartXfer | |
+| $e706 | EndOfBlockRead | |
+| $e729 | EndOfBlkWrite | |
+| $e778 | XferDone | |
+| $e794 | Xfer1stByte | |
+| $e7a3 | XferByte | |
+| $e7bb | VRAMStructWrite | :green_circle: |
+| $e844 | FetchDirectPtr | :green_circle: |
+| $e86a | WriteVRAMBuffers | :green_circle: |
+| $e8b3 | ReadIndividualVRAMBytes | :green_circle: |
+| $e8d2 | PrepareVRAMString | :green_circle: |
+| $e8e1 | PrepareVRAMStrings | :green_circle: |
+| $e94f | GetVRAMBufferByte | :green_circle: |
+| $e97d | Pixel2NamConv | :green_circle: |
+| $e997 | Nam2PixelConv | :green_circle: |
+| $e9b1 | Random | :green_circle: |
+| $e9c8 | SpriteDMA | :green_circle: |
+| $e9d3 | CounterLogic | :green_circle: |
+| $e9eb | ReadPads | :green_circle: |
+| $ea1a | ReadDownPads | :green_circle: |
+| $ea1f | ReadOrDownPads | :green_circle: |
+| $ea36 | ReadDownVerifyPads | :green_circle: |
+| $ea4c | ReadOrDownVerifyPads | :green_circle: |
+| $ea68 | ReadDownExpPads | :green_circle: |
+| $ea84 | VRAMFill | :green_circle: |
+| $ead2 | MemFill | :green_circle: |
+| $eaea | SetScroll | :green_circle: |
+| $eafd | JumpEngine | :green_circle: |
+| $eb13 | ReadKeyboard | |
+| $ebaf | LoadTileset | :green_circle: |
+| $ec22 | unk_EC22 | |
+| $ee17 | StartMotor | |
 
 ## Initialization
 
