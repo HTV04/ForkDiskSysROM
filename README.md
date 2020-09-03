@@ -22,7 +22,7 @@ tl;dr This sucks rn, come back later (or try to build it, idc)
 
 ## APIs
 ### Legend
-So this is the way I'm formatting the legend ~~totally not a traffic light~~:
+So this is the way I'm formatting the legend for the status ~~totally not a traffic light~~:
 | Symbol | Description |
 | - | - |
 | :green_circle: | Fully implemented, open-source |
@@ -30,7 +30,7 @@ So this is the way I'm formatting the legend ~~totally not a traffic light~~:
 | :red_circle: | Partially implemented, may not work |
 | :black_circle: | Not implemented |
 
-| Address | Name | Implemented |
+| Address | Name | Status |
 | - | - | - |
 | $e149 | Delay131 | :green_circle: |
 | $e153 | Delayms | :green_circle: |
