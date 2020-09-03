@@ -25,7 +25,7 @@ tl;dr This sucks rn, come back later (or try to build it, idc)
 So this is the way I'm formatting the legend for the status ~~totally not a traffic light~~:
 | Symbol | Description |
 | - | - |
-| :green_circle: | Fully implemented, open-source |
+| :green_circle: | Fully implemented, open-source (probably from FreeDiskSysROM) |
 | :yellow_circle: | Implemented, but still mainly uses FDS BIOS code |
 | :red_circle: | Partially implemented, may not work |
 | :black_circle: | Not implemented |
