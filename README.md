@@ -23,7 +23,6 @@ So this is the way I'm formatting the legend ~~totally not a traffic light~~:
 | Not implemented |
 
 | Address | Name | Implemented |
-| ------- | ---- | ------- | ----------- |
 | $e149 | Delay131 | :green_circle: |
 | $e153 | Delayms | :green_circle: |
 | $e161 | DisPFObj | :green_circle: |
