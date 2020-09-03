@@ -99,9 +99,9 @@ So this is the way I'm formatting the legend ~~totally not a traffic light~~:
 | $ec22 | unk_EC22 | |
 | $ee17 | StartMotor | |
 
-## Initialization
+# Initialization
 
-# Building
+## Building
 
 To build, use [asm6f](https://github.com/freem/asm6f).
 
