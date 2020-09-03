@@ -28,7 +28,7 @@ So this is the way I'm formatting the legend ~~totally not a traffic light~~:
 | :green_circle: | Fully implemented, open-source |
 | :yellow_circle: | Implemented, but still mainly uses FDS BIOS code |
 | :red_circle: | Partially implemented, may not work |
-| | Not implemented |
+| :black_circle: | Not implemented |
 
 | Address | Name | Implemented |
 | - | - | - |
@@ -46,32 +46,32 @@ So this is the way I'm formatting the legend ~~totally not a traffic light~~:
 | $e1f8 | LoadFiles | :red_circle: |
 | $e237 | AppendFile | :red_circle: |
 | $e239 | WriteFile | :red_circle: |
-| $e2b7 | CheckFileCount | |
-| $e2bb | AdjustFileCount | |
-| $e301 | SetFileCount1 | |
-| $e305 | SetFileCount | |
-| $e32a | GetDiskInfo | |
-| $e3da | AddYtoPtr0A | |
-| $e3e7 | GetHardCodedPointers | |
-| $e3ea | GetHardCodedPointersWriteProtected | |
-| $e445 | CheckDiskHeader | |
-| $e484 | GetNumFiles | |
-| $e492 | SetNumFiles | |
-| $e4a0 | FileMatchTest | |
-| $e4da | SkipFiles | |
-| $e4f9 | LoadData | |
-| $e506 | ReadData | |
-| $e5b5 | SaveData | |
-| $e64d | WaitForDriveReady | |
-| $e685 | StopMotor | |
-| $e68f | CheckBlockType | |
-| $e6b0 | WriteBlockType | |
-| $e6e3 | StartXfer | |
-| $e706 | EndOfBlockRead | |
-| $e729 | EndOfBlkWrite | |
-| $e778 | XferDone | |
-| $e794 | Xfer1stByte | |
-| $e7a3 | XferByte | |
+| $e2b7 | CheckFileCount | :black_circle: |
+| $e2bb | AdjustFileCount | :black_circle: |
+| $e301 | SetFileCount1 | :black_circle: |
+| $e305 | SetFileCount | :black_circle: |
+| $e32a | GetDiskInfo | :black_circle: |
+| $e3da | AddYtoPtr0A | :black_circle: |
+| $e3e7 | GetHardCodedPointers | :black_circle: |
+| $e3ea | GetHardCodedPointersWriteProtected | :black_circle: |
+| $e445 | CheckDiskHeader | :black_circle: |
+| $e484 | GetNumFiles | :black_circle: |
+| $e492 | SetNumFiles | :black_circle: |
+| $e4a0 | FileMatchTest | :black_circle: |
+| $e4da | SkipFiles | :black_circle: |
+| $e4f9 | LoadData | :black_circle: |
+| $e506 | ReadData | :black_circle: |
+| $e5b5 | SaveData | :black_circle: |
+| $e64d | WaitForDriveReady | :black_circle: |
+| $e685 | StopMotor | :black_circle: |
+| $e68f | CheckBlockType | :black_circle: |
+| $e6b0 | WriteBlockType | :black_circle: |
+| $e6e3 | StartXfer | :black_circle: |
+| $e706 | EndOfBlockRead | :black_circle: |
+| $e729 | EndOfBlkWrite | :black_circle: |
+| $e778 | XferDone | :black_circle: |
+| $e794 | Xfer1stByte | :black_circle: |
+| $e7a3 | XferByte | :black_circle: |
 | $e7bb | VRAMStructWrite | :green_circle: |
 | $e844 | FetchDirectPtr | :green_circle: |
 | $e86a | WriteVRAMBuffers | :green_circle: |
@@ -94,10 +94,10 @@ So this is the way I'm formatting the legend ~~totally not a traffic light~~:
 | $ead2 | MemFill | :green_circle: |
 | $eaea | SetScroll | :green_circle: |
 | $eafd | JumpEngine | :green_circle: |
-| $eb13 | ReadKeyboard | |
+| $eb13 | ReadKeyboard | :black_circle: |
 | $ebaf | LoadTileset | :green_circle: |
-| $ec22 | unk_EC22 | |
-| $ee17 | StartMotor | |
+| $ec22 | unk_EC22 | :black_circle: |
+| $ee17 | StartMotor | :black_circle: |
 
 # Initialization
 
