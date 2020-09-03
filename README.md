@@ -1,39 +1,42 @@
-# FreeDiskSysROM
+# ForkDiskSysROM
 
-This project has one goal - a compatible re-implementation of the Famicom Disk System BIOS under an OSS license. Unlike the Famicom console itself, which has no program ROM built-in, the Famicom Disk System includes an 8 KiB PRG-ROM containing disk I/O routines, VRAM transfer routines, joypad reading code, an animation featuring Mario and Luigi when no disk is present in the drive, and more. The code, data, graphics, music, and animation contained in the original BIOS are copyrighted by Nintendo.
+Huge thanks to jamesathey for his [FreeDiskSysROM](https://github.com/jamesathey/FreeDiskSysROM) project.
 
-FreeDiskSysROM aims to provide a replacement for the original FDS BIOS that can be freely redistributed and that is capable of running all published FDS software.
+ForkDiskSysROM does not currently have the same goal as FreeDiskSysROM, which is completely original code. The goal of this fork right now is to create a working clone of the FDS BIOS using both original code and assembled code from the original FDS BIOS. In the end product, all of the code will be original (or at least modfied/optimized from the FDS BIOS), and no graphics from the original FDS BIOS will be needed whatsoever.
 
-# Audience
+The problem that arises from a goal like this is how far "original" code can go. FDS games were made with the FDS BIOS in mind, not the other way around, so the offsets for some functions may only allow for the original FDS BIOS code. I suppose in this case, exceptions will have to be made.
 
-## Emulators
+Don't expect the way I format the code to be the best, I'm in between a beginner and an intermediate 6502 programmer.
 
-Famicom and NES emulators historically require a dump of the Famicom Disk System BIOS to be able to emulate FDS titles. Emulators can ship FreeDiskSysROM with their installers instead of requiring end-users to either copy the ROM out of their own FDS hardware or breaking copyright law by downloading a BIOS rip from elsewhere on the Internet.
-
-## Clone hardware
-
-Modern hardware clones of the FDS RAM Adapter or FPGA re-implementations of the entire Famicom Disk System also need a BIOS.
+I've currently semi-implemented some of the code related to files for now. I'm planning to add more later, though.
 
 # Status
 
 ## APIs
+### Legend
+| Symbol | Description |
+| --- | --- |
+| :green_circle: | Fully implemented, open-source |
+| :yellow_circle: | Implemented, but still mainly uses FDS BIOS code |
+| :red_circle: | Partially implemented, may not work |
+| | Not implemented |
 
 | Address | Name | # of Games | Implemented |
 | ------- | ---- | ------- | ----------- |
-| $e149 | Delay131 | | :white_check_mark: |
-| $e153 | Delayms | | :white_check_mark: |
-| $e161 | DisPFObj | | :white_check_mark: |
-| $e16b | EnPFObj | | :white_check_mark: |
-| $e171 | DisObj | | :white_check_mark: |
-| $e178 | EnObj | | :white_check_mark: |
-| $e17e | DisPF | | :white_check_mark: |
-| $e185 | EnPF | | :white_check_mark: |
-| $e18b | NMI | | :white_check_mark: |
-| $e1b2 | VINTWait | | :white_check_mark: |
-| $e1c7 | IRQ | | :white_check_mark: |
-| $e1f8 | LoadFiles | | |
-| $e237 | AppendFile | | |
-| $e239 | WriteFile | | |
+| $e149 | Delay131 | | :green_circle: |
+| $e153 | Delayms | | :green_circle: |
+| $e161 | DisPFObj | | :green_circle: |
+| $e16b | EnPFObj | | :green_circle: |
+| $e171 | DisObj | | :green_circle: |
+| $e178 | EnObj | | :green_circle: |
+| $e17e | DisPF | | :green_circle: |
+| $e185 | EnPF | | :green_circle: |
+| $e18b | NMI | | :green_circle: |
+| $e1b2 | VINTWait | | :green_circle: |
+| $e1c7 | IRQ | | :green_circle: |
+| $e1f8 | LoadFiles | | :red_circle: |
+| $e237 | AppendFile | | :red_circle: |
+| $e239 | WriteFile | | :red_circle: |
 | $e2b7 | CheckFileCount | | |
 | $e2bb | AdjustFileCount | | |
 | $e301 | SetFileCount1 | | |
@@ -60,30 +63,30 @@ Modern hardware clones of the FDS RAM Adapter or FPGA re-implementations of the 
 | $e778 | XferDone | | |
 | $e794 | Xfer1stByte | | |
 | $e7a3 | XferByte | | |
-| $e7bb | VRAMStructWrite | | :white_check_mark: |
-| $e844 | FetchDirectPtr | | :white_check_mark: |
-| $e86a | WriteVRAMBuffers | | :white_check_mark: |
-| $e8b3 | ReadIndividualVRAMBytes | | :white_check_mark: |
-| $e8d2 | PrepareVRAMString | | :white_check_mark: |
-| $e8e1 | PrepareVRAMStrings | | :white_check_mark: |
-| $e94f | GetVRAMBufferByte | | :white_check_mark: |
-| $e97d | Pixel2NamConv | | :white_check_mark: |
-| $e997 | Nam2PixelConv | | :white_check_mark: |
-| $e9b1 | Random | | :white_check_mark: |
-| $e9c8 | SpriteDMA | | :white_check_mark: |
-| $e9d3 | CounterLogic | | :white_check_mark: |
-| $e9eb | ReadPads | | :white_check_mark: |
-| $ea1a | ReadDownPads | | :white_check_mark: |
-| $ea1f | ReadOrDownPads | | :white_check_mark: |
-| $ea36 | ReadDownVerifyPads | | :white_check_mark: |
-| $ea4c | ReadOrDownVerifyPads | | :white_check_mark: |
-| $ea68 | ReadDownExpPads | | :white_check_mark: |
-| $ea84 | VRAMFill | | :white_check_mark: |
-| $ead2 | MemFill | | :white_check_mark: |
-| $eaea | SetScroll | | :white_check_mark: |
-| $eafd | JumpEngine | | :white_check_mark: |
+| $e7bb | VRAMStructWrite | | :green_circle: |
+| $e844 | FetchDirectPtr | | :green_circle: |
+| $e86a | WriteVRAMBuffers | | :green_circle: |
+| $e8b3 | ReadIndividualVRAMBytes | | :green_circle: |
+| $e8d2 | PrepareVRAMString | | :green_circle: |
+| $e8e1 | PrepareVRAMStrings | | :green_circle: |
+| $e94f | GetVRAMBufferByte | | :green_circle: |
+| $e97d | Pixel2NamConv | | :green_circle: |
+| $e997 | Nam2PixelConv | | :green_circle: |
+| $e9b1 | Random | | :green_circle: |
+| $e9c8 | SpriteDMA | | :green_circle: |
+| $e9d3 | CounterLogic | | :green_circle: |
+| $e9eb | ReadPads | | :green_circle: |
+| $ea1a | ReadDownPads | | :green_circle: |
+| $ea1f | ReadOrDownPads | | :green_circle: |
+| $ea36 | ReadDownVerifyPads | | :green_circle: |
+| $ea4c | ReadOrDownVerifyPads | | :green_circle: |
+| $ea68 | ReadDownExpPads | | :green_circle: |
+| $ea84 | VRAMFill | | :green_circle: |
+| $ead2 | MemFill | | :green_circle: |
+| $eaea | SetScroll | | :green_circle: |
+| $eafd | JumpEngine | | :green_circle: |
 | $eb13 | ReadKeyboard | 0 | |
-| $ebaf | LoadTileset | | :white_check_mark: |
+| $ebaf | LoadTileset | | :green_circle: |
 | $ec22 | unk_EC22 | | |
 | $ee17 | StartMotor | | |
 
@@ -93,21 +96,8 @@ Modern hardware clones of the FDS RAM Adapter or FPGA re-implementations of the 
 
 To build, use [asm6f](https://github.com/freem/asm6f).
 
-```asm6f freedisksys.asm```
+```asm6f [-l] freedisksys.asm```
 
 The `-l` flag is very useful for development - it shows the addresses assigned
 to each instruction, so you can easily see how much room remains for a given
 subroutine.
-
-# Contributing
-
-Rules:
-
-1. Do not even look at a disassembly of the original FDS BIOS.
-1. Only contribute code to which you hold the copyright or which is already under a compatible license.
-
-# License
-
-FreeDiskSysROM is licensed under the GNU LGPL v3. The intent in using this license is to allow anyone to replace the 8 KiB official FDS BIOS with FreeDiskSysROM, whether for commerical or non-commercial purposes, so long as the source of FreeDiskSysROM (including any modifications) is made available to the end-user under the same license.
-
-Although the Famicom does not have an OS or any concept of dynamic linking, the FDS BIOS is analogous to a system library in practice. FDS titles, FDS emulators, and FDS clone systems are all permitted to utilize FreeDiskSysROM without regard to or changes to the licenses of their own code.
