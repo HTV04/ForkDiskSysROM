@@ -1,14 +1,22 @@
 # ForkDiskSysROM
 
+Yes, this project is back. No, it's not going to be finished any time soon.
+
 Huge thanks to jamesathey for his [FreeDiskSysROM](https://github.com/jamesathey/FreeDiskSysROM) project.
 
-ForkDiskSysROM does not currently have the same goal as FreeDiskSysROM, which is completely original code. The goal of this fork right now is to create a working clone of the FDS BIOS using both original code and assembled code from the original FDS BIOS. In the end product, all of the code will be original (or at least modfied/optimized from the FDS BIOS), and no graphics from the original FDS BIOS will be needed whatsoever.
+ForkDiskSysROM does not currently have the same goal as FreeDiskSysROM, which is completely original code. The goal of this fork right now is to create a working clone of the FDS BIOS using both original code and assembled code from the original FDS BIOS. Therefore, none of the commits made in this fork should be pulled into FreeDiskSysROM at the moment. To quote jamesathey on how to contribute to FreeDiskSysROM, "Do not even look at a disassembly of the original FDS BIOS." Oops. Well, that doesn't apply here (*cough* please help me *cough*)!
 
-The problem that arises from a goal like this is how far "original" code can go. FDS games were made with the FDS BIOS in mind, not the other way around, so the offsets for some functions may only allow for the original FDS BIOS code. I suppose in this case, exceptions will have to be made.
+However, in the end product ~~that will probably never exist~~, all of the code will be original (or at least modfied/optimized from the FDS BIOS), and no graphics from the original FDS BIOS will be needed whatsoever.
+
+The problem that arises from a goal like this is how far "original" code can go. FDS games were made with the FDS BIOS in mind, not the other way around, so the offsets for some functions may only allow for the original FDS BIOS code. I suppose in this case, exceptions will have to be made. Who am I to talk though? This is far from finished.
 
 Also, I don't know what the hell I am supposed to do about the sound samples. ¯\\\_(ツ)\_/¯
 
-I've currently semi-implemented some of the code related to files for now. I'm planning to add more later, though.
+I've currently semi-implemented some of the code related to files for now. I *might* add more functions later, though.
+
+No releases are currently given, because this currently doesn't build a valid ROM. However, you can still try to build it to debug it, if you want. I can't guarantee that it will build, though.
+
+tl;dr This sucks rn, come back later (or try to build it, idc)
 
 # Status
 
