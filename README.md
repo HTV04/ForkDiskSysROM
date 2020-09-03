@@ -28,7 +28,7 @@ So this is the way I'm formatting the legend for the status ~~totally not a traf
 | :green_circle: | Fully implemented, open-source (probably from FreeDiskSysROM) |
 | :yellow_circle: | Implemented, but still mainly uses FDS BIOS code |
 | :red_circle: | Partially implemented, may not work |
-| :black_circle: | Not implemented |
+| :black_circle: | Not implemented (or dummied out) |
 
 | Address | Name | Status |
 | - | - | - |
