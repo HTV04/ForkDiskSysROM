@@ -1,5 +1,4 @@
-; FreeDiskSysROM
-; Copyright (c) 2018 James Athey
+; ForkDiskSysROM
 ;
 ; This program is free software: you can redistribute it and/or modify it under
 ; the terms of the GNU Lesser General Public License version 3 as published by
@@ -102,36 +101,7 @@ INCLUDE delay.asm
 INCLUDE ppumask.asm
 INCLUDE nmi.asm
 INCLUDE irq.asm
-
-; Loads files specified by DiskID into memory from disk. Load addresses are
-; decided by the file's header.
-; Parameters: Pointer to Disk ID, Pointer to File List
-; Returns: A = error #, Y = # of files loaded
-API_ENTRYPOINT $e1f8
-LoadFiles:
-	RTS
-
-; Appends the file data given by DiskID to the disk. This means that the file
-; is tacked onto the end of the disk, and the disk file count is incremented.
-; The file is then read back to verify the write. If an error occurs during
-; verification, the disk's file count is decremented (logically hiding the
-; written file).
-; Parameters: Pointer to Disk ID, Pointer to File Header
-; Returns: A = error #
-API_ENTRYPOINT $e237
-AppendFile:
-	RTS
-
-; Same as "Append File", but instead of writing the file to the end of the
-; disk, A specifies the sequential position on the disk to write the file (0
-; is the first). This also has the effect of setting the disk's file count to
-; the A value, therefore logically hiding any other files that may reside after
-; the written one.
-; Parameters: Pointer to Disk ID, Pointer to File Header, A = file #
-; Returns: A = error #
-API_ENTRYPOINT $e239
-WriteFile:
-	RTS
+INCLUDE files.asm
 
 ; Reads in disk's file count, compares it to A, then sets the disk's file count
 ; to A.
