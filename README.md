@@ -20,7 +20,7 @@ So this is the way I'm formatting the legend ~~totally not a traffic light~~:
 | :green_circle: | Fully implemented, open-source |
 | :yellow_circle: | Implemented, but still mainly uses FDS BIOS code |
 | :red_circle: | Partially implemented, may not work |
-| Not implemented |
+| | Not implemented |
 
 | Address | Name | Implemented |
 | ---- | ---- | ---- |
