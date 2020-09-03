@@ -16,14 +16,14 @@ I've currently semi-implemented some of the code related to files for now. I'm p
 ### Legend
 So this is the way I'm formatting the legend ~~totally not a traffic light~~:
 | Symbol | Description |
-| ---- | ---- |
+| - | - |
 | :green_circle: | Fully implemented, open-source |
 | :yellow_circle: | Implemented, but still mainly uses FDS BIOS code |
 | :red_circle: | Partially implemented, may not work |
 | | Not implemented |
 
 | Address | Name | Implemented |
-| ---- | ---- | ---- |
+| - | - | - |
 | $e149 | Delay131 | :green_circle: |
 | $e153 | Delayms | :green_circle: |
 | $e161 | DisPFObj | :green_circle: |
